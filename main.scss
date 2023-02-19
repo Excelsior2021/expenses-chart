@@ -6,6 +6,10 @@
   max-width: 540px;
   margin: auto;
   margin-top: 67px;
+
+  @include media-desktop {
+    margin-top: 2%;
+  }
 }
 
 .balance {
@@ -17,6 +21,10 @@
   border-radius: 10px;
   margin: 16px;
   padding: 20px;
+
+  @include media-desktop {
+    padding: 36px;
+  }
 
   &__heading {
     font-size: 15px;
@@ -77,6 +85,7 @@
   @include media-desktop {
     padding: 40px;
     padding-top: 32px;
+    margin-bottom: 0;
   }
 
   &__heading {

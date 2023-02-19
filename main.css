@@ -29,6 +29,11 @@ body {
   margin: auto;
   margin-top: 67px;
 }
+@media (min-width: 1024px) {
+  .container {
+    margin-top: 2%;
+  }
+}
 
 .balance {
   display: flex;
@@ -39,6 +44,11 @@ body {
   border-radius: 10px;
   margin: 16px;
   padding: 20px;
+}
+@media (min-width: 1024px) {
+  .balance {
+    padding: 36px;
+  }
 }
 .balance__heading {
   font-size: 15px;
@@ -98,6 +108,7 @@ body {
   .spending {
     padding: 40px;
     padding-top: 32px;
+    margin-bottom: 0;
   }
 }
 .spending__heading {
