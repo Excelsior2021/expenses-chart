@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 @font-face {
   font-family: "DM Sans Regular";
   src: url("./assets/fonts/DMSans-Regular.ttf");
@@ -23,4 +25,5 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "DM Sans Regular";
+  background-color: $cream;
 }
