@@ -33,7 +33,7 @@ data.forEach(day => {
   chartEl.appendChild(dayDiv)
 
   bar.style.height = barHeight
-  amountDiv.style.top = `${(0.62 - barHeightCalc) * 100}%`
+  amountDiv.style.top = `${(0.68 - barHeightCalc) * 100}%`
   amountDiv.style.display = "none"
   dayLabel.innerText = day.day
 

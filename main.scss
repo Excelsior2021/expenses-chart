@@ -3,11 +3,13 @@
 @use "./partials/mixins" as *;
 
 .container {
-  max-width: 540px;
+  width: 343px;
+  min-width: fit-content;
   margin: auto;
   margin-top: 67px;
 
   @include media-desktop {
+    width: 540px;
     margin-top: 2%;
   }
 }
@@ -23,15 +25,19 @@
   padding: 20px;
 
   @include media-desktop {
-    padding: 36px;
+    margin: auto;
+    margin-bottom: 24px;
+    padding: 26px 36px;
   }
 
   &__heading {
     font-size: 15px;
     font-weight: 100;
+    margin-bottom: 4px;
 
     @include media-desktop {
       font-size: 18px;
+      margin-bottom: 8px;
     }
   }
 
@@ -77,15 +83,16 @@
 .spending {
   color: $dark-brown;
   background-color: $pale-orange;
+  min-width: fit-content;
   border-radius: 10px;
   margin: 16px;
   margin-bottom: 67px;
   padding: 20px;
 
   @include media-desktop {
+    margin: auto;
     padding: 40px;
     padding-top: 32px;
-    margin-bottom: 0;
   }
 
   &__heading {
@@ -144,14 +151,26 @@
 .chart {
   display: flex;
   justify-content: space-between;
-  height: 177px;
+  height: 210px;
+  border-bottom: 2px solid $cream;
+  margin-bottom: 24px;
   padding-bottom: 24px;
+
+  @include media-desktop {
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+  }
 
   &__day {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 33px;
+    min-width: 33px;
+    margin-right: 12px;
+
+    &:last-child {
+      margin-right: 0;
+    }
 
     @include media-desktop {
       width: 50px;
@@ -175,22 +194,29 @@
     align-items: center;
     color: $pale-orange;
     background-color: $dark-brown;
-    font-size: 12px;
     font-weight: bold;
-    width: 70px;
-    height: 40px;
+    width: 50px;
+    height: 30px;
     border-radius: 5px;
-    margin-bottom: 8px;
+
+    @include media-desktop {
+      width: 70px;
+      height: 40px;
+    }
   }
 
   &__amount {
     color: $pale-orange;
-    font-size: 18px;
+    font-size: 12px;
+
+    @include media-desktop {
+      font-size: 18px;
+    }
   }
 
   &__bar {
-    width: 100%;
     background-color: $soft-red;
+    width: 100%;
     border-radius: 3px;
     cursor: pointer;
 
